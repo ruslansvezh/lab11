@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int A, B;
+	cout << "Введите числа: ";
+	cin >> A >> B;
+	if (A > 0 && B > 0)
+	{
+		while (A != 0 && B != 0)
+			if (A > B)
+				A = A % B;
+			else
+				B = B % A;
+		cout << "НОД: " << A + B;
+	}
+	else
+		cout << "Введены неверные данные";
+}
