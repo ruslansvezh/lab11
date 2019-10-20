@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int N, F1 = 1, F2 = 1, K = 2;
+	cout << "Введите число: " << endl;
+	cin >> N;
+	while (N > F2) 
+	{
+		F2 = F1 + F2;
+		F1 = F2 - F1;
+		K++;
+	}
+	if (N == F2)
+	{
+		cout << "Порядковый номер числа Фибоначчи : " << K << endl;
+	}
+	else
+	{
+		cout << N << " - не является числом Фибоначчи!" << endl;
+	}
+	cout << endl;
+	return 0;
+}
