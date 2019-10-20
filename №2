@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int a,b;
+	{
+		cout << "Введите  A и B(A > B) : " << endl;
+		cin >> a >> b;
+		if (a > b)
+		{
+			while (a > b)
+				a = a - b;
+			cout << "Длина незанятой части: " << a;
+		}
+		else
+		{
+			cout << "Повторите ввод данных!" << endl;
+		}
+	}
+}
